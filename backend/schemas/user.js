@@ -1,11 +1,12 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   name: 'user',
-  tile: 'User',
+  title: 'User',
   type: 'document',
   fields: [
     {
       name: 'userName',
-      title: 'username',
+      title: 'UserName',
       type: 'string',
     },
     {
@@ -14,4 +15,4 @@ export default {
       type: 'string',
     },
   ],
-}
+};

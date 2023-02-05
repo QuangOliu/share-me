@@ -8,6 +8,7 @@ export default defineConfig({
   title: 'Sanity Project',
 
   projectId: '6qft97bh',
+  // projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

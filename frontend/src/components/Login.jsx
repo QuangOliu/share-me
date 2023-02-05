@@ -8,11 +8,8 @@ import { gapi, loadAuth2 } from "gapi-script";
 
 import { client } from "../client";
 const Login = () => {
-  // let auth2 = loadAuth2(gapi, process.env.REACT_APP_GOOGLE_API_TOKEN);
   const navigate = useNavigate();
   const responseGoogle = (response) => {
-    console.log("click");
-    console.log(response);
     localStorage.setItem("user", JSON.stringify(response.profileObj));
     const { name, googleId, imageUrl } = response.profileObj;
 
@@ -23,7 +20,6 @@ const Login = () => {
       image: imageUrl,
     };
     client.createIfNotExists(doc).then(() => {
-      console.log("Bike was created (or was already present)");
       navigate("/", { replace: true });
     });
   };
